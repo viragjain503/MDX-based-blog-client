@@ -9,8 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4",
     "next": "13.2.4",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-bootstrap-typeahead": "^6.1.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.2"
   }
 }

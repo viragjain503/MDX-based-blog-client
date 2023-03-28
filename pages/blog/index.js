@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // const inter = Inter({ subsets: ["latin"] });
 
 
-export default function Home() {
+export default function Blog() {
   return (
     <>
 
