@@ -12,10 +12,10 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="# home">Home</Nav.Link>
-            <Nav.Link href="#link">Products</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/Products">Products</Nav.Link>
             <Nav.Link href="/blog">Blog</Nav.Link>
-            <Nav.Link href="#link">Resume</Nav.Link>
+            <Nav.Link href="/Resume">Resume</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
