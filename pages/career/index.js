@@ -9,25 +9,15 @@ import ArticleCard from "../../components/ArticleCard";
 import MyImage from "@/components/MyImage";
 import { Image } from 'react-bootstrap';
 import ArticleComponent from "@/components/ArticleComponent";
+import MyTimeline from "@/components/MyTimeline";
+import { ScrollTop } from 'primereact/scrolltop';
 
-export default function Blog() {
+export default function Career() {
   return (
     <>
       <Container className="p-2">
-        
-        <ArticleComponent/>
-        <ArticleComponent/>
-        <ArticleComponent/>
-        <ArticleComponent/>
-        <ArticleComponent/>
-        <ArticleComponent/>
-        <ArticleComponent/>
-       
-        {/* <Row className="justify-content-center">
-          <Col lg={6} className="text-center">
-            <MyPagination />
-          </Col>
-        </Row> */}
+      <ScrollTop target="parent" threshold={100} className="w-2rem h-2rem border-round-md bg-primary" icon="pi pi-arrow-up text-base" />
+          <MyTimeline/>
       </Container>
     </>
   );
