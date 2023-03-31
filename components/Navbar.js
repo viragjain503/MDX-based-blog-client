@@ -6,7 +6,7 @@ import Search from './Search';
 
 function BasicExample() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" sticky="top" >
       <Container>
         <Navbar.Brand href="#home">Virag Jain</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
