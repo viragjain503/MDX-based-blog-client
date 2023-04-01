@@ -15,6 +15,15 @@ export default function Home() {
           <Col lg={4} className="text-center p-2">
             <ProjectCard />
           </Col>
+          <Col lg={4} className="text-center p-2">
+            <ProjectCard />
+          </Col>
+          <Col lg={4} className="text-center p-2">
+            <ProjectCard />
+          </Col>
+          <Col lg={4} className="text-center p-2">
+            <ProjectCard />
+          </Col>
         </Row>
       </Container>
     </>

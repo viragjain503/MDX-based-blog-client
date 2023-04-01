@@ -22,7 +22,35 @@ export default function Blog() {
         <ArticleComponent/>
         <ArticleComponent/>
         <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
+        <ArticleComponent/>
        
+        <ArticleComponent/>
         {/* <Row className="justify-content-center">
           <Col lg={6} className="text-center">
             <MyPagination />
