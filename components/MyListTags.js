@@ -3,12 +3,12 @@ import Loading from "./Loading";
 import IndividualListItem from "./IndividualListItem";
 import ListGroup from "react-bootstrap/ListGroup";
 
-function MyList() {
+function MyListTags(props) {
   const [articles, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/article/latest')
+    fetch('http://localhost:5000/tags/'+props.tag)
       .then(response => response.json())
       .then(articles => {
         console.log(articles)
@@ -39,4 +39,4 @@ function MyList() {
   );
 }
 
-export default MyList;
+export default MyListTags;

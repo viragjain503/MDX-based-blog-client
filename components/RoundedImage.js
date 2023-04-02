@@ -15,11 +15,11 @@ const RoundedImage = () => {
   };
 
   const borderStyle = {
-  border: `3px solid ${hovered ? '#000' : '#ccc'}`,
+  border: `3px solid ${hovered ? '#ff7f6c' : '#ccc'}`,
   };
   return (
     <Image
-      src="https://via.placeholder.com/150"
+      src="/Myself150.png"
       roundedCircle
       fluid
       style={borderStyle}

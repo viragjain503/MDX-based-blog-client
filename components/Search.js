@@ -1,39 +1,32 @@
-import 'react-bootstrap-typeahead/css/Typeahead.css';
-import { useState } from 'react';
-import { Form } from 'react-bootstrap';
-import { Typeahead } from 'react-bootstrap-typeahead';
+import "react-bootstrap-typeahead/css/Typeahead.css";
+import { useState } from "react";
+import { Form } from "react-bootstrap";
+import { Typeahead } from "react-bootstrap-typeahead";
+import { FcSearch } from "react-icons/fc";
+import Button from "react-bootstrap/Button";
 
-function Search(){
-    const [singleSelections, setSingleSelections] = useState([]);
-    const [multiSelections, setMultiSelections] = useState([]);
-  
-    return (
-      <>
-        <Form.Group>
-          {/* <Form.Label>Single Selection</Form.Label> */}
-          <Typeahead
-            id="basic-typeahead-single"
-            labelKey="name"
-            onChange={setSingleSelections}
-            options={["virag","jain"]}
-            placeholder="Search for Projects"
-            selected={singleSelections}
-          />
-        </Form.Group>
-        {/* <Form.Group style={{ marginTop: '20px' }}>
-          <Form.Label>Multiple Selections</Form.Label>
-          <Typeahead
-            id="basic-typeahead-multiple"
-            labelKey="name"
-            multiple
-            onChange={setMultiSelections}
-            options={["virag","jain"]}
-            placeholder="Choose several states..."
-            selected={multiSelections}
-          />
-        </Form.Group> */}
-      </>
-    );
-  };
+function Search() {
+  const [singleSelections, setSingleSelections] = useState([]);
 
-  export default Search;
+  return (
+    <>
+      <Form className="d-flex">
+      <Form.Group className="mb-0 me-2">
+        <Typeahead
+          id="basic-typeahead-single"
+          labelKey="name"
+          onChange={setSingleSelections}
+          options={["virag", "jain"]}
+          placeholder="Search for Projects"
+          selected={singleSelections}
+        />
+      </Form.Group>
+      <Button variant="outline-secondary">
+        <FcSearch />
+      </Button>
+    </Form>
+    </>
+  );
+}
+
+export default Search;
