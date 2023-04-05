@@ -22,7 +22,7 @@ export default function Layout({ children }) {
             <Row className="justify-content-center">
               <Col
                 className="text-center"
-                style={{ "margin-top": "25px" }}
+                style={{ "marginTop": "25px" }}
               >
                 <h4
                   style={{
@@ -39,7 +39,7 @@ export default function Layout({ children }) {
             <Row className="justify-content-center">
               <Col
                 className="text-center"
-                style={{ "margin-top": "25px" }}
+                style={{ "marginTop": "25px" }}
               >
                 <h4
                   style={{

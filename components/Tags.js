@@ -12,7 +12,7 @@ function Tags() {
     border: 0,
     color: "white",
     borderRadius: 30,
-    margin: "10px"
+    margin: "10px",
   };
 
   useEffect(() => {
@@ -34,10 +34,10 @@ function Tags() {
     <>
       {tags.map((tag) => {
         return (
-          <Link href={"/tags/" + tag.name}>
-          <Button style={gradient}>
-            {tag.name} ({tag.articles.length})
-          </Button>
+          <Link href={"/tags/" + tag.name} key={tag}>
+            <Button style={gradient} >
+              {tag.name}
+            </Button>
           </Link>
         );
       })}

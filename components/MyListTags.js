@@ -3,14 +3,15 @@ import Loading from "./Loading";
 import IndividualListItem from "./IndividualListItem";
 import ListGroup from "react-bootstrap/ListGroup";
 
-function MyListTags(props) {
+function  MyListTags(props) {
   const [articles, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/tags/'+props.tag)
+    fetch('http://localhost:5000/article/articlesbytag/'+props.tag)
       .then(response => response.json())
       .then(articles => {
+        console.log("Here")
         console.log(articles)
         setData(articles);
         setIsLoading(false);
