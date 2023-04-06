@@ -2,7 +2,7 @@ import { Image } from "react-bootstrap";
 
 function LogoImage(props) {
 
-  return <Image alt={props.name} height={40} width={40}  src={"/tech/" + props.name + ".png"}  />;
+  return <Image alt={props.name} height={props.height + "px"} width={props.width + "px"}  src={"/tech/" + props.name + ".png"}  />;
 
 }
 

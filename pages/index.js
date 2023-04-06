@@ -66,7 +66,7 @@ export default function Home() {
         </Row>
         <Row className="justify-content-center">
           <Col lg={12} className="text-center">
-            <MyList />
+            <MyList nodate={false}/>
           </Col>
         </Row>
       </Container>
@@ -87,13 +87,13 @@ export default function Home() {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Col lg={4} className="text-center">
+          <Col lg={4} className="text-center p-1">
             <ProjectCard />
           </Col>
-          <Col lg={4} className="text-center">
+          <Col lg={4} className="text-center p-1">
             <ProjectCard />
           </Col>
-          <Col lg={4} className="text-center">
+          <Col lg={4} className="text-center p-1">
             <ProjectCard />
           </Col>
         </Row>

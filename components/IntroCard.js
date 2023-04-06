@@ -30,19 +30,19 @@ function IntroCard() {
       <Card.Footer className="text-muted">
         <ButtonGroup className="w-100">
           <Button variant="link">
-            <LogoImage name="react" />
+            <LogoImage name="react"  height={40} width={40} />
           </Button>
           <Button variant="link">
-            <LogoImage name="node" />
+            <LogoImage name="node"   height={40} width={40}/>
           </Button>
           <Button variant="link">
-            <LogoImage name="java" />
+            <LogoImage name="java"  height={40} width={40} />
           </Button>
           <Button variant="link">
-            <LogoImage name="aws" />
+            <LogoImage name="aws"   height={40} width={40}/>
           </Button>
           <Button variant="link">
-            <LogoImage name="python" />
+            <LogoImage name="python"   height={40} width={40}/>
           </Button>
         </ButtonGroup>
       </Card.Footer>

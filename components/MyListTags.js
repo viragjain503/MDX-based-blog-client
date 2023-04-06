@@ -1,41 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import IndividualListItem from "./IndividualListItem";
 import ListGroup from "react-bootstrap/ListGroup";
 
-function  MyListTags(props) {
+function MyListTags(props) {
   const [articles, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-
+  console.log("Props - " + props.tag);
   useEffect(() => {
-    fetch('http://localhost:5000/article/articlesbytag/'+props.tag)
-      .then(response => response.json())
-      .then(articles => {
-        console.log("Here")
-        console.log(articles)
+    fetch("http://localhost:5000/article/articlesbytag/" + props.tag)
+      .then((response) => {
+        console.log(response);
+        response.json()
+      })
+      .then((articles) => {
+        console.log("Here");
+        console.log(articles);
         setData(articles);
         setIsLoading(false);
       })
-      .catch(error => console.error(error));
+      .catch((error) => console.error(error));
   }, []);
 
   if (isLoading) {
-    return (
-      <Loading/>
-    );
+    return <Loading />;
   }
 
   return (
     <>
-    <ListGroup as="ol" numbered>
-      {
-        articles.map(article => {
-          return(
-            <IndividualListItem item={article} key={article}/>
-          )
-        })
-      }
-    </ListGroup>
+      <ListGroup as="ol" numbered>
+        {/* {articles.map((article) => {
+          return <IndividualListItem item={article} key={article} />;
+        })} */}
+      </ListGroup>
     </>
   );
 }

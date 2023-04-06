@@ -4,7 +4,7 @@ import MyList from './MyList';
 
 function TopArticles() {
   return (
-    <MyList/>
+    <MyList nodate={true}/>
   );
 }
 

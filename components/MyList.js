@@ -3,7 +3,7 @@ import Loading from "./Loading";
 import IndividualListItem from "./IndividualListItem";
 import ListGroup from "react-bootstrap/ListGroup";
 
-function MyList() {
+function MyList(props) {
   const [articles, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -30,7 +30,7 @@ function MyList() {
       {
         articles.map(article => {
           return(
-            <IndividualListItem item={article} key={article}/>
+            <IndividualListItem item={article} nodate={props.nodate} key={article._id}/>
           )
         })
       }
