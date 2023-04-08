@@ -1,5 +1,5 @@
 // pages/articles/[singlearticle].js
-import {  useEffect } from "react";
+
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import fs from "fs";
@@ -44,8 +44,9 @@ export async function getServerSideProps({ params }) {
     `http://localhost:5000/article/title/${singlearticle}`
   );
   const data = await res.json();
-
+   
   const source = fs.readFileSync(`blogs/${singlearticle}.mdx`, "utf8");
+  
   const mdxSource = await serialize(source);
 
   return { props: { mdxSource, data } };

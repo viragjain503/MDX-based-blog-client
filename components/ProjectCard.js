@@ -1,11 +1,18 @@
-import Card from 'react-bootstrap/Card';
-import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Badge from "react-bootstrap/Badge";
 import { ButtonGroup, Row } from "react-bootstrap";
 import LogoImage from "./LogoImage";
 import { useState } from "react";
 
-function ProjectCard() {
-
+function ProjectCard(props) {
+ 
+  const gradient = {
+    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    border: 0,
+    color: "white",
+    borderRadius: 30,
+    margin: "10px",
+  };
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -30,29 +37,41 @@ function ProjectCard() {
   };
 
   return (
-    <div style={cardStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-    <Card>
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Card.Link href="#" style={linkStyle}>Card Link</Card.Link>
-        <Card.Link href="#" style={linkStyle}>Another Link</Card.Link>
-      </Card.Body>
-      <Card.Footer className="text-muted">
-        <ButtonGroup className="w-100">
-          <Button variant="link">
-            <LogoImage name="react" height={30} width={30}/>
-          </Button>
-          <Button variant="link">
-            <LogoImage name="node"  height={30} width={30} />
-          </Button>
-        </ButtonGroup>
-      </Card.Footer>
-    </Card>
+    <div
+      style={cardStyle}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Card>
+        <Card.Body>
+          <Card.Title>{props.project.title}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">
+            {props.project.subtitle}
+          </Card.Subtitle>
+          <Card.Text>{props.project.detail}</Card.Text>
+          <Card.Link
+            href={props.project.github}
+            target="_blank"
+            style={linkStyle}
+          >
+            <LogoImage name="github" height={30} width={30} />
+          </Card.Link>
+        </Card.Body>
+        <Card.Footer className="text-muted">
+            {
+              props.project.tags.map(tag => {
+                return (
+                <Badge
+                style={gradient}
+                variant="secondary"
+                className="m-1"
+              >
+                {tag}
+              </Badge>)
+              })
+            }
+        </Card.Footer>
+      </Card>
     </div>
   );
 }

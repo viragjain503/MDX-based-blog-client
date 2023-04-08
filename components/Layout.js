@@ -1,6 +1,6 @@
 // components/layout.js
 import Navbar from "./Navbar";
-// import Footer from './footer'
+import Footer from './Footer';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -50,8 +50,8 @@ export default function Layout({ children }) {
           </Col>
         </Row>
       </Container>
-
-      {/* <Footer /> */}
+      
+      <Footer />
     </>
   );
 }

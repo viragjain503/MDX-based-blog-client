@@ -1,0 +1,24 @@
+[
+    {
+        "title": "P2P lending-borrowing System",
+        "subtitle": "Final Year Project",
+        "detail": "ML based Investment Advisor, P2P lending-borrowing, Budget planner, etc",
+        "github": "https://github.com/viragjainedu/FinanceEcosystem",
+        "tags": ["ML","React", "MySQL", "AWS","Node"]
+    },
+    {
+        "title": "Studiare",
+        "subtitle": "Third year project",
+        "detail": "An E-Learning website like Udemy/Coursera",
+        "github": "https://github.com/akhil-here/Studiare",
+        "tags": ["Express","React", "MongoDB", "Node"]
+    },
+    {
+        "title": "MDX Next Blog",
+        "subtitle": "Personal Portfolio Website",
+        "detail": "Markdown based Next js blog website with Node and Mongodb",
+        "github": "https://github.com/viragjain503/my-blog",
+        "tags": ["NextJS","React", "MongoDB", "AWS"]
+    }
+  
+]

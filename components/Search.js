@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 
 function Search() {
   const [singleSelections, setSingleSelections] = useState([]);
-
+  
   return (
     <>
       <Form className="d-flex">

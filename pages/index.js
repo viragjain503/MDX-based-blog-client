@@ -4,11 +4,12 @@ import ProjectCard from "@/components/ProjectCard";
 import RoundedImage from "@/components/RoundedImage";
 import { Container, Row, Col } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
+const projects = require('../projects.json');
 
 export default function Home() {
   return (
     <>
-    {/* Intro Container */}
+      {/* Intro Container */}
       <Container>
         <Row className="justify-content-center">
           <Col lg={6} className="text-center">
@@ -49,8 +50,8 @@ export default function Home() {
         </Row>
       </Container>
       {/* Latest Articles*/}
-      <Container >
-        <Row style={{ "margin": 50 }} className="justify-content-center">
+      <Container>
+        <Row style={{ margin: 50 }} className="justify-content-center">
           <Col lg={6} className="text-center">
             <h1
               style={{
@@ -66,13 +67,13 @@ export default function Home() {
         </Row>
         <Row className="justify-content-center">
           <Col lg={12} className="text-center">
-            <MyList nodate={false} articles={"latest"}/>
+            <MyList nodate={false} articles={"latest"} />
           </Col>
         </Row>
       </Container>
       {/* Projects */}
-       <Container >
-        <Row style={{ "margin": 50 }} className="justify-content-center">
+      <Container>
+        <Row style={{ margin: 50 }} className="justify-content-center">
           <Col lg={6} className="text-center">
             <h1
               style={{
@@ -87,17 +88,17 @@ export default function Home() {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Col lg={4} className="text-center p-1">
-            <ProjectCard />
-          </Col>
-          <Col lg={4} className="text-center p-1">
-            <ProjectCard />
-          </Col>
-          <Col lg={4} className="text-center p-1">
-            <ProjectCard />
-          </Col>
+          {
+             projects.map(project => {
+              return(
+                <Col lg={4} className="text-center p-1">
+                  <ProjectCard project={project}/>
+                </Col>
+              )
+            })
+          }
         </Row>
-      </Container>  
+      </Container>
     </>
   );
 }
