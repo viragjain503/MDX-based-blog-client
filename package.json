@@ -26,6 +26,8 @@
     "react-loading": "^2.0.3",
     "react-scroll-progress-bar": "^1.1.13",
     "react-scroll-to-top": "^3.0.0",
+    "react-slugify": "^3.0.2",
+    "react-social-icons": "^5.15.0",
     "react-type-animation": "^3.0.1",
     "react-vertical-timeline-component": "^3.6.0"
   },
