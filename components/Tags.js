@@ -19,7 +19,6 @@ function Tags() {
     fetch("http://localhost:5000/tags")
       .then((response) => response.json())
       .then((tags) => {
-        console.log(tags);
         setTags(tags);
         setIsLoadingTags(false);
       })

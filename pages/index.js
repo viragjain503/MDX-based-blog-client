@@ -66,7 +66,7 @@ export default function Home() {
         </Row>
         <Row className="justify-content-center">
           <Col lg={12} className="text-center">
-            <MyList nodate={false}/>
+            <MyList nodate={false} articles={"latest"}/>
           </Col>
         </Row>
       </Container>

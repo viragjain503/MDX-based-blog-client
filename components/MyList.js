@@ -6,12 +6,11 @@ import ListGroup from "react-bootstrap/ListGroup";
 function MyList(props) {
   const [articles, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-
+  
   useEffect(() => {
-    fetch('http://localhost:5000/article/latest')
+    fetch(`http://localhost:5000/article/${props.articles}`)
       .then(response => response.json())
       .then(articles => {
-        console.log(articles)
         setData(articles);
         setIsLoading(false);
       })

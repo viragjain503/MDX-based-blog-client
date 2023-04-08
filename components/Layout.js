@@ -20,10 +20,7 @@ export default function Layout({ children }) {
           <Col lg={3} className="p-2">
             <MyCard />
             <Row className="justify-content-center">
-              <Col
-                className="text-center"
-                style={{ "marginTop": "25px" }}
-              >
+              <Col className="text-center" style={{ marginTop: "25px" }}>
                 <h4
                   style={{
                     display: "inline-block",
@@ -37,10 +34,7 @@ export default function Layout({ children }) {
             </Row>
             <TopArticles />
             <Row className="justify-content-center">
-              <Col
-                className="text-center"
-                style={{ "marginTop": "25px" }}
-              >
+              <Col className="text-center" style={{ marginTop: "25px" }}>
                 <h4
                   style={{
                     display: "inline-block",
@@ -52,7 +46,7 @@ export default function Layout({ children }) {
                 </h4>
               </Col>
             </Row>
-            <Tags/>
+            <Tags />
           </Col>
         </Row>
       </Container>

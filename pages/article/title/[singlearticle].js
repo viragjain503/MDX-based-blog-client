@@ -1,5 +1,5 @@
 // pages/articles/[singlearticle].js
-
+import {  useEffect } from "react";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import fs from "fs";
@@ -7,7 +7,8 @@ import moment from "moment/moment";
 import ArticleTitle from "@/components/ArticleTitle";
 
 const MyComponent = ({ mdxSource, data }) => {
-  const formattedDate = moment(data[0].published).format("MMM DD, YYYY");
+  
+  const formattedDate = moment(data.published).format("MMM DD, YYYY");
 
   const components = {
     // Define components to be used in the MDX file here
@@ -15,12 +16,12 @@ const MyComponent = ({ mdxSource, data }) => {
 
   return (
     <div>
-     
         <ArticleTitle
-          name={data[0].title}
+          name={data.title}
           photo="/Myself.png"
           date={formattedDate}
-          tags={data[0].tags}
+          tags={data.tags}
+          views={data.views}
         />
       <div
         style={{
@@ -35,17 +36,8 @@ const MyComponent = ({ mdxSource, data }) => {
   );
 };
 
-export async function getStaticPaths() {
-  // Define the paths that should be pre-rendered for this page
-  const blogsDirectory = fs.readdirSync("blogs");
-  const paths = blogsDirectory.map((filename) => ({
-    params: { singlearticle: filename.replace(/\.mdx$/, "") },
-  }));
 
-  return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const { singlearticle } = params;
 
   const res = await fetch(

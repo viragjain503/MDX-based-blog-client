@@ -1,7 +1,7 @@
 import { Card, Badge } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
-const ArticleTitle = ({ name, photo, date, tags }) => {
+const ArticleTitle = ({ name, photo, date, tags, views}) => {
   const gradient = {
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
     border: 0,
@@ -37,8 +37,9 @@ const ArticleTitle = ({ name, photo, date, tags }) => {
             </div>
           </div>
         </div>
-        <div className="p-4">
+        <div className="p-2">
           <p className="text-muted mb-0">{date}</p>
+          <p className="text-muted mb-0">Views - {views}</p>
         </div>
       </Card.Body>
     </Card>
