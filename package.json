@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/mdx": "^13.3.0",
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.4",
     "moment": "^2.29.4",
     "next": "13.2.4",
+    "next-mdx-remote": "^4.4.1",
+    "path": "^0.12.7",
     "primeicons": "^6.0.1",
     "primereact": "^9.2.2",
     "react": "18.2.0",

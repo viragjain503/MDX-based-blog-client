@@ -1,13 +1,62 @@
-import { useRouter } from "next/router";
+// pages/articles/[singlearticle].js
 
-function SingleArticle() {
-    const router = useRouter();
-    const singlearticle = router.query.singlearticle;
-    return (
-    <>
-        <h1>{singlearticle} </h1>
-    </>
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
+import fs from "fs";
+import moment from "moment/moment";
+import ArticleTitle from "@/components/ArticleTitle";
+
+const MyComponent = ({ mdxSource, data }) => {
+  const formattedDate = moment(data[0].published).format("MMM DD, YYYY");
+
+  const components = {
+    // Define components to be used in the MDX file here
+  };
+
+  return (
+    <div>
+     
+        <ArticleTitle
+          name={data[0].title}
+          photo="/Myself.png"
+          date={formattedDate}
+          tags={data[0].tags}
+        />
+      <div
+        style={{
+          "background-color": "#f2f2f2",
+          padding: "20px",
+          margin: "5px",
+        }}
+      >
+        <MDXRemote {...mdxSource} components={components} />
+      </div>
+    </div>
   );
+};
+
+export async function getStaticPaths() {
+  // Define the paths that should be pre-rendered for this page
+  const blogsDirectory = fs.readdirSync("blogs");
+  const paths = blogsDirectory.map((filename) => ({
+    params: { singlearticle: filename.replace(/\.mdx$/, "") },
+  }));
+
+  return { paths, fallback: false };
 }
 
-export default SingleArticle;
+export async function getStaticProps({ params }) {
+  const { singlearticle } = params;
+
+  const res = await fetch(
+    `http://localhost:5000/article/title/${singlearticle}`
+  );
+  const data = await res.json();
+
+  const source = fs.readFileSync(`blogs/${singlearticle}.mdx`, "utf8");
+  const mdxSource = await serialize(source);
+
+  return { props: { mdxSource, data } };
+}
+
+export default MyComponent;

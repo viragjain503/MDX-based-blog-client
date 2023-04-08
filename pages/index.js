@@ -48,7 +48,7 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
-      {/* Latest Articles */}
+      {/* Latest Articles*/}
       <Container >
         <Row style={{ "margin": 50 }} className="justify-content-center">
           <Col lg={6} className="text-center">
@@ -71,7 +71,7 @@ export default function Home() {
         </Row>
       </Container>
       {/* Projects */}
-      <Container >
+       <Container >
         <Row style={{ "margin": 50 }} className="justify-content-center">
           <Col lg={6} className="text-center">
             <h1
@@ -97,7 +97,7 @@ export default function Home() {
             <ProjectCard />
           </Col>
         </Row>
-      </Container>
+      </Container>  
     </>
   );
 }
