@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import MyListTags from "@/components/MyListTags";
 import { useRouter } from "next/router";
 import Button from "react-bootstrap/Button";
 import { Container, Row, Col } from "react-bootstrap";
@@ -59,7 +58,7 @@ function Tags() {
 
       <ListGroup as="ol" numbered>
         {articles && articles.map((article) => {
-          return <IndividualListItem item={article} key={article} />;
+          return <IndividualListItem item={article} key={article._id} />;
         })}
       </ListGroup>
     </>

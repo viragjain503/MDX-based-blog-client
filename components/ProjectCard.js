@@ -65,7 +65,9 @@ function ProjectCard(props) {
                 style={gradient}
                 variant="secondary"
                 className="m-1"
+                key={tag}
               >
+                
                 {tag}
               </Badge>)
               })

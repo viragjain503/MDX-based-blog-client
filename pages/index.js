@@ -91,8 +91,8 @@ export default function Home() {
           {
              projects.map(project => {
               return(
-                <Col lg={4} className="text-center p-1">
-                  <ProjectCard project={project}/>
+                <Col lg={4} className="text-center p-1" key={project.title}>
+                  <ProjectCard project={project} />
                 </Col>
               )
             })

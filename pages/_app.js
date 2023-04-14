@@ -1,4 +1,3 @@
-import SSRProvider from "react-bootstrap/SSRProvider";
 import Layout from "../components/Layout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProgressBar from "react-scroll-progress-bar"; 

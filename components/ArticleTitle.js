@@ -27,7 +27,7 @@ const ArticleTitle = ({ name, photo, date, tags, views}) => {
               {tags.map((tag) => (
                 <Badge
                   style={gradient}
-                  key={tag._id}
+                  key={tag.name}
                   variant="secondary"
                   className="m-1"
                 >

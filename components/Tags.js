@@ -33,7 +33,7 @@ function Tags() {
     <>
       {tags.map((tag) => {
         return (
-          <Link href={"/tags/" + tag.name} key={tag}>
+          <Link href={"/tags/" + tag.name} key={tag.name}>
             <Button style={gradient} >
               {tag.name}
             </Button>
