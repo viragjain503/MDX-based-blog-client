@@ -41,7 +41,7 @@ export async function getServerSideProps({ params }) {
   const { singlearticle } = params;
 
   const res = await fetch(
-    `http://localhost:5000/article/title/${singlearticle}`
+    `${process.env.NEXT_PUBLIC_URL}/article/title/${singlearticle}`
   );
   const data = await res.json();
    

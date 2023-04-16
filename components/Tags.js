@@ -16,7 +16,7 @@ function Tags() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/tags")
+    fetch(`${process.env.NEXT_PUBLIC_URL}/tags`)
       .then((response) => response.json())
       .then((tags) => {
         setTags(tags);

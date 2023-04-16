@@ -15,7 +15,7 @@ function Search() {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("http://localhost:5000/article/titles");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/article/titles`);
       const data = await res.json();
       setData(data);
     }
@@ -41,7 +41,7 @@ function Search() {
             labelKey="name"
             onChange={setSingleSelections}
             options={data}
-            placeholder="Search for Projects"
+            placeholder="Search for Articles"
             selected={singleSelections}
           />
         </Form.Group>

@@ -25,7 +25,7 @@ function Tags() {
 
   useEffect(() => {
     if(tag){
-      fetch(`http://localhost:5000/article/articlesbytag/${tag}`)
+      fetch(`${process.env.NEXT_PUBLIC_URL}/article/articlesbytag/${tag}`)
       .then((response) => {
         console.log("Response here")
         console.log(response);

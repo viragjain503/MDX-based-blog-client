@@ -14,6 +14,9 @@ const Footer = () => {
           <Col lg={2} className="text-center">
             <SocialIcon url="https://www.instagram.com/viragjain503/" />
           </Col>
+          <Col lg={2} className="text-center">
+            <SocialIcon url="https://www.linkedin.com/in/virag-jain-58166510a/" />
+          </Col>
         </Row>
       </Container>
     </footer>

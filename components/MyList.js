@@ -8,7 +8,7 @@ function MyList(props) {
   const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
-    fetch(`http://localhost:5000/article/${props.articles}`)
+    fetch(`${process.env.NEXT_PUBLIC_URL}/article/${props.articles}`)
       .then(response => response.json())
       .then(articles => {
         setData(articles);
